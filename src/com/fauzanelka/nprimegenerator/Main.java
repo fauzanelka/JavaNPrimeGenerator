@@ -3,6 +3,7 @@ package com.fauzanelka.nprimegenerator;
 import com.fauzanelka.nprimegenerator.util.Prime;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,23 +11,25 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n;
+        int n = 0;
 
         do {
             System.out.print("Masukkan N: ");
-            while (!sc.hasNextInt()) {
-                System.out.println("N tidak valid!");
-                System.out.print("Masukkan N: ");
+
+            try {
+                n = sc.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("N tidak valid");
                 sc.next();
             }
-
-            n = sc.nextInt();
 
             if (n > 1000) {
                 System.out.println("N maksimum 1000");
                 n = 0;
             }
         } while (n <= 0);
+
+        sc.close();
 
         List<Integer> nprimes = new ArrayList<>();
 

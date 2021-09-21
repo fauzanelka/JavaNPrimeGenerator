@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/N Prime Generator.iml" filepath="$PROJECT_DIR$/N Prime Generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaNPrimeGenerator.iml" filepath="$PROJECT_DIR$/JavaNPrimeGenerator.iml" />
     </modules>
   </component>
 </project>
